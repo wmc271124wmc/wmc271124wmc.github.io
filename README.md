@@ -1,62 +1,95 @@
-# SurVis - Visual Literature Browser
+# Multi-Agent LLM Systems: Interactive Literature Review
 
-![Screenshot](/doc/survis.png)
+[![COMP4126 Research Methods](https://img.shields.io/badge/Course-COMP4126_Research_Methods-blue)](https://www.example.com/course_link) This repository contains an interactive visualization of a literature review on multi-agent Large Language Model (LLM) systems. This project was created as part of the COMP4126 Research Methods coursework and is powered by [SurVis](https://github.com/fabian-beck/survis), a visual literature browser framework.
 
-SurVis is a flexible online browser to present and analyze scientific literature. The system is made for authors of survey articles, theses, or books who want to share their references in a user-friendly way. All you need to start is a bib file and a list of keywords for your papers.
+## Overview
 
-Test SurVis with a reference literature database: http://dynamicgraphs.fbeck.com
+This interactive literature browser presents a curated collection of 10 key papers exploring diverse approaches to multi-agent LLM systems. The papers are categorized based on their primary agent interaction paradigms, application domains, and memory integration approaches, facilitating a structured exploration of this rapidly emerging research field.
 
-## How To Use SurVis for Your Literature Collection
+## Table of Contents
 
-Dowload the latest SurVis release or fork this repository.
+- [Literature Categorization](#literature-categorization)
+  - [Self-Improvement Methods](#self-improvement-methods)
+  - [Debate-Based Methods](#debate-based-methods)
+  - [Role-Based Collaboration Frameworks](#role-based-collaboration-frameworks)
+  - [Game-Theoretic Approaches](#game-theoretic-approaches)
+  - [Cross-cutting Dimensions](#cross-cutting-dimensions)
+- [How to Use the Visualization](#how-to-use-the-visualization)
+- [Technical Information](#technical-information)
+- [Paper Selection Methodology](#paper-selection-methodology)
+- [About the Coursework](#about-the-coursework)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
 
-To start SurVis, open 'src/index.html' in your browser.
+## Literature Categorization
 
-The bibliography data is stored in 'bib/references.bib' in BibTeX format.
+The papers are organized into four main categories based on how LLM agents interact:
 
-Supplemental data is contained in 'src/data/':
-* 'tag_categories.js': list of special tag categories; they can be used as a prefix for the tags and appear, for instance, 'a:b' refers to tag 'b' in tag category 'a'
-* 'authorized_tags.js': tags that are defined through a description (highlighted in SurVis, description appears as a tooltip)
-* 'search_stopwords.js': a list of stopwords used to exclude terms from search queries
-* 'papers_pdf' (optional): PDF files of the papers, please use the BibTeX id as a file name
-* 'papers_img' (optional): PNG thumbnails for the papers, please use the BibTeX id as a file name
+### 1. Self-Improvement Methods
+Papers focusing on agents learning from their own experiences or reflections.
+* *Reflexion: Language Agents with Verbal Reinforcement Learning*
+* *Improving Language Model Negotiation with Self-Play and In-Context Learning from AI Feedback*
+* *Unleashing Cognitive Synergy through Multi-Persona Self-Collaboration*
 
-Please do not edit the files in 'src/data/generated/' because they are created automatically. 
+### 2. Debate-Based Methods
+Papers using structured argumentation between multiple agents.
+* *Improving Factuality and Reasoning through Multiagent Debate*
+* *Encouraging Divergent Thinking through Multi-Agent Debate*
+* *ChatEval: Towards Better LLM-Based Evaluators Through Multi-Agent Debate*
 
-After completing your changes, just run 'update_data.py' with Python 3. Reload SurVis in the browser to see the changed bibliography. The script will continue to check for updates on the bib file until you stop it.
+### 3. Role-Based Collaboration Frameworks
+Papers establishing structured workflows with specialized agent roles.
+* *CAMEL: Communicative Agents for Mind Exploration*
+* *MetaGPT: Meta Programming for Multi-Agent Collaboration*
+* *Multi-Agent Collaboration: Harnessing Intelligent LLM Agents*
 
-If the edit mode is activated, BibTeX entries can be modified in the browser, but are not stored in the 'bib' directory. To make those changes persistent, use 'download BibTex' in SurVis and copy the BibTeX data to your bib file in the 'bib' directory. You can also use the features to save and load the data from local storage of the browser; be careful, however, these features are still experimental.
+### 4. Game-Theoretic Approaches
+Papers applying multi-agent interaction to game scenarios.
+* *Exploring LLMs for Communication Games: An Empirical Study on Werewolf*
 
-Further properties of SurVis, such as the title of the page, can be modified in the file 'src/properties.js'. For the publication of your literature collection, you should usually deactivate the edit mode in the properties ('editable = false;').
+### Cross-cutting Dimensions
+The literature is also analyzed across:
+* **Application Domains:** Code generation, reasoning, negotiation, evaluation.
+* **Memory Integration Approaches:** External memory, in-context experience, no explicit memory.
 
-Enjoy SurVis and send feedback if you like.
+## How to Use the Visualization
 
-## Learn more
+1.  **Filtering:** Use the tag selectors at the top of the visualization page to filter papers by categories, application domains, or memory integration approaches.
+2.  **Searching:** Utilize the search box to find papers by author, title, or specific keywords.
+3.  **Visualization Modes:** Explore different visualization modes (if available in your SurVis setup) to understand relationships and patterns among the papers.
+4.  **Details on Demand:** Click on any paper in the visualization to expand and read its full abstract and other details.
 
-We've published a paper about SurVis at VAST 2015 - please reference it if you use or want to refer to SurVis in one of your publications. 
+## Technical Information
 
-Beck, Fabian; Koch, Sebastian; Weiskopf, Daniel: Visual Analysis and Dissemination of Scientific Literature Collections with SurVis. In: IEEE Transactions on Visualization and Computer Graphics (2015).
+This visualization was created using [SurVis](https://github.com/fabian-beck/survis), a framework for Visual Literature Browsers developed by Beck et al. The literature data is stored in BibTeX format (`.bib`) and converted to JSON (`.json`) for the interactive visualization.
 
-* DOI: http://dx.doi.org/10.1109/TVCG.2015.2467757
-* Preview video: https://vimeo.com/136206061 
+## Paper Selection Methodology
 
-## List of Literature Collections Using Survis
+The selection process involved a systematic search focusing on influential multi-agent LLM research published primarily in 2023. The chosen works represent key developments and diverse approaches within the field.
 
-* Dynamic Graph Visualization - http://dynamicgraphs.fbeck.com
-* Visualizing Group Structures in Graphs - http://go.visus.uni-stuttgart.de/groups-in-graphs/
-* Performance Visualization - http://idav.ucdavis.edu/~ki/STAR/
-* Visualization for Software Reuse - http://www.cos.ufrj.br/~schots/survis_reuse/
-* Set Visualization - http://www.cvast.tuwien.ac.at/~alsallakh/SetViz/literature/www/index.html
-* Visualizing High-Dimensional Data - http://www.sci.utah.edu/~shusenl/highDimSurvey/website/
+## About the Coursework
 
-Please contact me (fabian.beck@visus.uni-stuttgart.de) if you know other collections using SurVis.
+This interactive visualization serves as a component of a comprehensive literature review on multi-agent LLM systems for the COMP4126 Research Methods course. The full literature review encompasses:
 
-## Contact
+* An analysis of current challenges in the research field.
+* A clearly defined scope for the survey.
+* Detailed summaries of each selected paper, organized by the categories outlined above.
+* An in-depth discussion of emerging research trends and future directions.
 
-Fabian Beck
+## Credits
 
-VISUS, University of Stuttgart
+* **Visualization Framework:** [SurVis](https://github.com/fabian-beck/survis) by Fabian Beck et al.
+* All papers included in the visualization are properly cited with links to their original sources.
 
-fabian.beck@visus.uni-stuttgart.de
+## License
 
-http://research.fbeck.com
+The SurVis framework is provided under its original license (please refer to the [SurVis repository](https://github.com/fabian-beck/survis) for specific details).
+
+## Contributing
+
+This project is primarily an academic coursework submission. However, if you have suggestions for improving the README or find issues with the visualization setup, feel free to open an issue.
+
+---
+
+Created for COMP4126 Research Methods, 2025.
